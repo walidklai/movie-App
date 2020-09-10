@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
-import './MovieCard.css'
+import React from 'react'
+import '../App.css'
+import StarRating from './StartsRating'
 
 function MovieCard(props) {
     return (
-        <div className='MovieCard'>
-            <img src={props.pic} width='200px' height='200px' />
-            <h2 className='moviename'>{props.name}</h2>
+        <div className='moviecard'>
+            <img src={props.pic} width='100%' height='45%'style={{borderRadius:'25px 25px 0px 0px'}}/>
+            <h2 style={{color:'orange'}}>Name : {props.name}</h2>
+            <h4 style={{color:'orange'}}><StarRating/></h4>
+            <h4 style={{color:'orange'}}>Minutes : {props.length}</h4>
+            <h4 style={{color:'orange'}}>type : {props.type}</h4>
             <hr/>
-            <h4>{props.length} min</h4>
-            <h4 style={{color :props.rating>7 ? 'lightgreen' : (props.rating>3&&props.rating<=7)? 'orange' : 'red'}}>{props.rating}/10</h4>
+            <p style={{color:'orange',wordWrap:'break-word'}}>{props.description}</p>
         </div>
     )
 }

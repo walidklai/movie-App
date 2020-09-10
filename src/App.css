@@ -1,19 +1,71 @@
-*{
-    background-color: rgb(175, 143, 143);
+* {
+    background-color: rgb(48, 48, 48);
 }
-img{
-    border-radius: 5px;
-}
-body{
-    font-family: "Lucida Console", Courier, monospace;
-}
-input[type=text],input[type=file]{
-    margin-top: 5px;
-}
-h1{
-    color: wheat;
+
+::placeholder {
+    color: orangered;
     text-align: center;
 }
-input :focus{
-    color: wheat;
+
+.modal {
+    background-color: orangered;
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    right: 0;
+    left: 37%;
+    top: 10%;
+    padding-top: 100px;
+}
+
+input[type=text], input[type=number], input[type=file], textarea {
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+.moviecard{
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 25%;
+    height: 900px;
+    background-color: rgb(48, 48, 48);
+    margin-top: 150px;
+    text-align: center;
+    overflow: hidden;
+}
+.moviecard:hover{
+    overflow-y: auto;
+    box-sizing: content-box;
+    box-shadow: 0px 10px 100px white;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: background 0.8s ,box-shadow 1s;  
+}
+p{
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.plus:hover{
+    box-shadow: 0px 10px 100px white;
+    background: rgba(22, 7, 7, 0.5);
+    transition: background 0.5s ,box-shadow 1s; 
+}
+.search:hover{
+    box-shadow: 0px 10px 100px white;
+    background: rgba(22, 7, 7, 0.5);
+    transition: background 0.5s ,box-shadow 1s;
+}
+button{
+    color: white;
+}
+.star{
+    cursor: pointer;
+    font-size: 50px;
+}
+input[type=radio]{
+    display: none;
 }
