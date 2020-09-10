@@ -16,7 +16,7 @@
     right: 0;
     left: 37%;
     top: 10%;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 input[type=text], input[type=number], input[type=file], textarea {
@@ -25,7 +25,7 @@ input[type=text], input[type=number], input[type=file], textarea {
     border-radius: 20px;
 }
 
-.moviecard{
+.moviecard {
     border: 1px solid white;
     border-radius: 25px;
     width: 25%;
@@ -35,37 +35,58 @@ input[type=text], input[type=number], input[type=file], textarea {
     text-align: center;
     overflow: hidden;
 }
-.moviecard:hover{
+
+.moviecard:hover {
     overflow-y: auto;
+    overflow-x: auto;
     box-sizing: content-box;
     box-shadow: 0px 10px 100px white;
     background: rgba(255, 255, 255, 0.5);
-    border: none;
-    transition: background 0.8s ,box-shadow 1s;  
+    border: unset;
+    border-radius: 100px;
+    transition: background 0.8s, box-shadow 1s,border-radius 15s;
+    cursor: pointer;
 }
-p{
+
+p {
     display: inline-block;
     text-align: left;
     margin-left: 10px;
     margin-right: 10px;
 }
-.plus:hover{
+
+.plus {
+    color: orangered;
+    width: 400px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 18px;
+    border: 1px solid orangered;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.plus:hover {
     box-shadow: 0px 10px 100px white;
     background: rgba(22, 7, 7, 0.5);
-    transition: background 0.5s ,box-shadow 1s; 
+    transition: background 0.5s, box-shadow 1s;
 }
-.search:hover{
+
+.search:hover {
     box-shadow: 0px 10px 100px white;
     background: rgba(22, 7, 7, 0.5);
-    transition: background 0.5s ,box-shadow 1s;
+    transition: background 0.5s, box-shadow 1s;
 }
-button{
+
+button {
     color: white;
 }
-.star{
+
+.star {
     cursor: pointer;
     font-size: 50px;
 }
-input[type=radio]{
+
+input[type=radio] {
     display: none;
 }

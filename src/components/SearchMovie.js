@@ -9,7 +9,7 @@ function SearchMovie(props) {
     }
     return (
             <div style={{ marginTop: '14px' }}>
-                <input className='search' type='text' placeholder='Search a Movie' value={searchValue} onChange={handleChange} style={{ color: 'orangered' }} />
+                <input className='search' type='text' placeholder='Search a Movie' value={searchValue} onChange={handleChange} style={{ color: 'orangered' }}/>
             </div>
     )
 }

@@ -7,7 +7,7 @@ function MovieCard(props) {
         <div className='moviecard'>
             <img src={props.pic} width='100%' height='45%'style={{borderRadius:'25px 25px 0px 0px'}}/>
             <h2 style={{color:'orange'}}>Name : {props.name}</h2>
-            <h4 style={{color:'orange'}}><StarRating/></h4>
+            <h4 style={{color:'orange'}}><StarRating rating={props.rating}/></h4>
             <h4 style={{color:'orange'}}>Minutes : {props.length}</h4>
             <h4 style={{color:'orange'}}>type : {props.type}</h4>
             <hr/>
