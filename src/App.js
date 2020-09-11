@@ -10,13 +10,18 @@ function App() {
     { id: Math.random() * 10000, name: 'Bad boys', length: 125, description: 'aiejapejapoe apeojapzoejaoj', type: 'comedy', rating: 3, pic: 'https://source.unsplash.com/random' },
     { id: Math.random() * 10000, name: 'The Revenant', length: 125, description: 'aiejapejapoe apeojapzoejaoj', type: 'drama', rating: 2, pic: 'https://source.unsplash.com/random' },
     { id: Math.random() * 10000, name: 'Batman', length: 125, description: 'aiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaoj', type: 'action', rating: 4, pic: 'https://source.unsplash.com/random' },
-    { id: Math.random() * 10000, name: 'Batman', length: 125, description: 'aiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaoj', type: 'action', rating: 4, pic: 'https://source.unsplash.com/random' }
+    { id: Math.random() * 10000, name: 'Batman', length: 125, description: 'aiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaojaiejapejapoe apeojapzoejaoj', type: 'action', rating: 4, pic: 'https://source.unsplash.com/random' },
+    { id: Math.random() * 10000, name: 'Bad boys', length: 125, description: 'aiejapejapoe apeojapzoejaoj', type: 'comedy', rating: 3, pic: 'https://source.unsplash.com/random' },
+    { id: Math.random() * 10000, name: 'Bad boys', length: 125, description: 'aiejapejapoe apeojapzoejaoj', type: 'comedy', rating: 3, pic: 'https://source.unsplash.com/random' }
   ])
   const [tmpTab, setTmpTab] = useState(movieData)
   const [openModal, setOpenModal] = useState(false)
   console.log(openModal)
   const handleSearch = (newSearch) => {
     setMovieData(tmpTab.filter(el => el.name.toUpperCase().includes(newSearch.replace(/\s+/g, " ").toUpperCase().trim())))
+  }
+  const handleSearchStars = (newSearch) => {
+    setMovieData(tmpTab.filter(el => el.rating === newSearch))
   }
   const addMovie = (newMovie) => {
     console.log('added', newMovie)
@@ -36,7 +41,10 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
           <button className='plus' onClick={() => setOpenModal(true)}>+</button>
           <ModalComp className='modalcomp' openModal={openModal} setOpenModal={setOpenModal} addMovie={addMovie} />
-          <SearchMovie handleSearch={handleSearch} />
+          <div>
+            <SearchMovie handleSearch={handleSearch} />
+            <StarsRaring handleSearchStars={handleSearchStars} />
+          </div>
         </div>
         <hr />
       </div>

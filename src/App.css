@@ -28,10 +28,10 @@ input[type=text], input[type=number], input[type=file], textarea {
 .moviecard {
     border: 1px solid white;
     border-radius: 25px;
-    width: 25%;
-    height: 900px;
+    width: 20%;
+    height: 450px;
     background-color: rgb(48, 48, 48);
-    margin-top: 150px;
+    margin-top: 25px;
     text-align: center;
     overflow: hidden;
 }
@@ -44,7 +44,7 @@ input[type=text], input[type=number], input[type=file], textarea {
     background: rgba(255, 255, 255, 0.5);
     border: unset;
     border-radius: 100px;
-    transition: background 0.8s, box-shadow 1s,border-radius 15s;
+    transition: background 0.8s, box-shadow 1s, border-radius 15s;
     cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ p {
 .plus {
     color: orangered;
     width: 400px;
-    height: 50px;
+    height: 100px;
     font-size: 50px;
     line-height: 18px;
     border: 1px solid orangered;
@@ -89,4 +89,22 @@ button {
 
 input[type=radio] {
     display: none;
+}
+
+.moviecard::-webkit-scrollbar {
+    width: 5px;
+}
+
+.moviecard::-webkit-scrollbar-track {
+    background: grey;
+    border-radius: 10px;
+}
+
+.moviecard::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 10px;
+}
+
+.moviecard::-webkit-scrollbar-thumb:hover {
+    background:orangered;
 }

@@ -44,7 +44,7 @@ function ModalComp(props) {
                 <input type='text' placeholder='Movie type' value={typeMovie} onChange={handleChangeType}/>
                 <br/>
                 <label style={{color:'orangered'}}>Rate the movie</label>
-                <StartsRating handleChangeRating={handleChangeRating}/>
+                <StartsRating handleChangeRating={handleChangeRating} openModal={props.openModal}/>
                 <br/>
                 <input type='file' value={picMovie} onChange={handleChangePic}/>
                 <br/>

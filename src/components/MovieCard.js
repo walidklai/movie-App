@@ -5,7 +5,7 @@ import StarRating from './StartsRating'
 function MovieCard(props) {
     return (
         <div className='moviecard'>
-            <img src={props.pic} width='100%' height='45%'style={{borderRadius:'25px 25px 0px 0px'}}/>
+            <img src={props.pic} width='100%' height='50%' style={{borderRadius:'25px 25px 0px 0px'}}/>
             <h2 style={{color:'orange'}}>Name : {props.name}</h2>
             <h4 style={{color:'orange'}}><StarRating rating={props.rating}/></h4>
             <h4 style={{color:'orange'}}>Minutes : {props.length}</h4>

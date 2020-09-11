@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import StarsRating from './StartsRating'
 
 function SearchMovie(props) {
     const [searchValue,setSearchValue]=useState('')
